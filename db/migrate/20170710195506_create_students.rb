@@ -5,5 +5,9 @@ class CreateStudents < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    # def add_column
+    #
+    # end
   end
 end
