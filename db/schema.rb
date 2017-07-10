@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20170710201956) do
   create_table "addresses", force: :cascade do |t|
     t.text "street"
     t.text "city"
-    t.bigint "address_id"
+    t.bigint "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address_id"], name: "index_addresses_on_address_id"
+    t.index ["student_id"], name: "index_addresses_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -30,5 +30,5 @@ ActiveRecord::Schema.define(version: 20170710201956) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "addresses", "addresses"
+  add_foreign_key "addresses", "students"
 end
